@@ -1,4 +1,10 @@
 [build]
-  command = "npm run build"
-  publish = "build"
-  functions = "netlify/functions"  # Points to your functions folder
+  command = "next build"
+  publish = ".next"
+
+# Functions directory (REQUIRED for Next.js + custom functions)
+functions = "netlify/functions"
+
+# Next.js plugin (auto-installed by Netlify for Next.js projects)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
